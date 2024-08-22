@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("#1");
+        //Data 1: Marks weights 78kg and is 1.69m tall. John weights 92kg and is 1.95m tall.
+        const MarksWeight = 78;
+        const MarksHeight = 1.69;
+        const JohnWeight = 92;
+        const JohnHeight = 1.95;
+
+        //Data 2: Marks weights 95kg and is 1.88m tall. John weights 85kg and is 1.76m tall.
+        const MarksWeight1 = 95;
+        const MarksHeight1 = 1.88;
+        const JohnWeight1 = 85;
+        const JohnHeight1 = 1.76;
+
+        const MarksBMI = calculateBMI(MarksWeight, MarksHeight);
+        const JohnBMI = calculateBMI(JohnWeight, JohnHeight);
+        const MarksBMI1 = calculateBMI(MarksWeight1, MarksHeight1);
+        const JohnBMI1 = calculateBMI(JohnWeight1, JohnHeight1);
+
+        function calculateBMI(weight, height) {
+            return weight / (height ** 2);
+        }
+
+        console.log("Data 1: ")
+        console.log("BMI Mark: ", MarksBMI);
+        console.log("BMI John: ", JohnBMI);
+        const MarksHigherBMI = MarksBMI > JohnBMI;
+        const mess = "MarkBMI is higher than  JohnBMI ";
+        console.log(MarksHigherBMI);
+        console.log(mess);
+
+
+        console.log("Data 2: ")
+        console.log("BMI Mark: ", MarksBMI1);
+        console.log("BMI John: ", JohnBMI1);
+        const MarksHigherBMI1 = MarksBMI > JohnBMI;
+        const mess1 = "JohnBMI is higher than MarkBMI ";
+        console.log(MarksHigherBMI);
+        console.log(mess1);
+
+        console.log("#2");
+        if (MarksBMI > JohnBMI) {
+            console.log("BMI of Mark " + MarksBMI + "is higher than John" + JohnBMI);
+        } else {
+            console.log("BMI of John " + JohnBMI + "is higher than Mark" + MarksBMI);
+        }
+
+        console.log("#3");
+
+        // Data 1
+        const dolphins = [96, 108, 89];
+        const koalas = [88, 91, 110];
+        // Data Bonus 1
+        const dolphins1 = [97, 112, 101];
+        const koalas1 = [109, 95, 123];
+        // Data Bonus 2
+        const dolphins2 = [97, 112, 101];
+        const koalas2 = [109, 95, 106];
+
+        function avg(scores) {
+            const sum = scores.reduce((total, score) => total + score, 0);
+            return sum / scores.length;
+        }
+    </script>
+</body>
+
+</html>
